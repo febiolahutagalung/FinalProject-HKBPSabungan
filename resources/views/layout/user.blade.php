@@ -13,7 +13,7 @@
   <!-- Google Web Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600&family=Roboto&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600&family=Roboto&display=swap" rel="stylesheet">
 
   <!-- Icon Font Stylesheet -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
@@ -53,7 +53,7 @@
             <a href="/admin/login" class="dropdown-toggle text-light" data-bs-toggle="dropdown"><small><i class="fa fa-sign-in-alt me-2"></i> Login</small></a>
             <div class="dropdown-menu rounded">
                 <a href="/admin/login" class="dropdown-item"><i class=" fas fa-user-alt me-2"></i> Admin</a>
-            </div> 
+            </div>
       </div>
       </div>
   </div>
@@ -64,7 +64,7 @@
 <div class="container-fluid position-relative p-0">
   <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
       <a href="/" class="navbar-brand p-0">
-          <h1 class="m-0"><i class="fas fa-church me-3" style="font-size: 1.5rem;"></i>HKBP</h1>
+          <h1 class="m-0"><i class="fas fa-church me-3" style="font-size: 1.5rem;"></i>HKBP Sabungan</h1>
           {{-- <img src="{{URL::asset('Template/img/logo.png')}}" alt="Logo">  --}}
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -139,7 +139,7 @@
               <!--/*** This template is free as long as you keep the below author’s credit link/attribution link/backlink. ***/-->
               <!--/*** If you'd like to use the template without the below author’s credit link/attribution link/backlink, ***/-->
               <!--/*** you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". ***/-->
-              Designed By Kelompok 11 PA-1 
+              Designed By Kelompok 11 PA-1
           </div>
           </div>
       </div>
@@ -150,7 +150,7 @@
 <!-- Footer End -->
 
 <!-- Back to Top -->
-<a href="#" class="btn btn-primary btn-primary-outline-0 btn-md-square back-to-top"><i class="fa fa-arrow-up"></i></a>   
+<a href="#" class="btn btn-primary btn-primary-outline-0 btn-md-square back-to-top"><i class="fa fa-arrow-up"></i></a>
 
 
   <!-- JavaScript Libraries -->

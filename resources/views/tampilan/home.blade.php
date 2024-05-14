@@ -2,7 +2,7 @@
 
 @section('container')
 
-      
+
             <!-- Carousel Start -->
             <div class="carousel-header">
                 <div id="carouselId" class="carousel slide" data-bs-ride="carousel">
@@ -13,7 +13,7 @@
                     </ol>
                     <div class="carousel-inner" role="listbox">
                         <div class="carousel-item active">
-                            <img src="{{ URL::asset('Template/img/GEREJA1.jpg') }}" class="img-fluid" alt="Image">
+                            <img src="{{ URL::asset('Template/img/mimage1.jpg') }}" class="img-fluid" alt="Image">
                             <div class="carousel-caption">
                                 <div class="p-3" style="max-width: 900px;">
                                     <h4 class="text-white text-uppercase fw-bold mb-4" style="letter-spacing: 3px;">Horas!!</h4>
@@ -22,7 +22,7 @@
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img src="{{URL::asset('Template/img/GEREJA2.jpg')}}" class="img-fluid" alt="Image">
+                            <img src="{{URL::asset('Template/img/mimage2.jpg')}}" class="img-fluid" alt="Image">
                             <div class="carousel-caption">
                                 <div class="p-3" style="max-width: 900px;">
                                     <h4 class="text-white text-uppercase fw-bold mb-4" style="letter-spacing: 3px;">Horas!!</h4>
@@ -31,7 +31,7 @@
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img src="{{ URL::asset('Template/img/GEREJA3.jpg') }}" class="img-fluid" alt="Image">
+                            <img src="{{ URL::asset('Template/img/mimageidk.jpg') }}" class="img-fluid" alt="Image">
                             <div class="carousel-caption">
                                 <div class="p-3" style="max-width: 900px;">
                                     <h4 class="text-white text-uppercase fw-bold mb-4" style="letter-spacing: 3px;">Horas!!</h4>
@@ -52,7 +52,7 @@
             </div>
             <!-- Carousel End -->
         </div>
-       
+
         <!-- Navbar & Hero End -->
 
         <!-- About Start -->
@@ -64,16 +64,16 @@
                             <img src="{{ URL::asset('Template/img/GEREJA4.png') }}" class="img-fluid w-10 h-10" alt="">
                         </div>
                     </div>
-                    
+
                     <div class="col-lg-7" style="background: linear-gradient(rgba(255, 255, 255, .8), rgba(255, 255, 255, .8)), ">
                         <h5 class="section-about-title pe-3">Sejarah Gereja</h5>
                         <h1 class="mb-4">Selamat Datang di HKBP Sabungan Kota</span></h1>
-                        <p class="mb-4">Gereja HKBP Sabungan, sebagian dari sejarah gereja di Indonesia, 
+                        <p class="mb-4">Gereja HKBP Sabungan, sebagian dari sejarah gereja di Indonesia,
                                         berakar dalam perjalanan iman dan perjuangan masyarakat Batak Toba sejak awal abad ke-19.
-                                         Meskipun dihadapkan pada tantangan budaya dan sosial, 
+                                         Meskipun dihadapkan pada tantangan budaya dan sosial,
                                          pendirian gereja ini pada tahun 1861 menjadi titik awal bagi komunitas yang berkumpul di Sabungan untuk memperkuat iman mereka.</p>
-                        <p class="mb-4">Sebagai pusat kegiatan ibadah, sosial, dan pendidikan bagi masyarakat, 
-                                        HKBP Sabungan telah menjadi lambang kekuatan iman dan pelayanan dalam menghadapi berbagai cobaan. 
+                        <p class="mb-4">Sebagai pusat kegiatan ibadah, sosial, dan pendidikan bagi masyarakat,
+                                        HKBP Sabungan telah menjadi lambang kekuatan iman dan pelayanan dalam menghadapi berbagai cobaan.
                                         Dengan fondasi sejarah yang kokoh, gereja ini terus menjadi terang bagi dunia sekitarnya, memperkuat komunitasnya,
                                          dan memberkati masyarakat yang dilayaninya.</p>
                     </div>
@@ -109,7 +109,7 @@
                 </div>
             </div>
         </div>
-        
+
         <script>
             function toggleAnswer(element) {
                 var answer = element.querySelector('.answer');
@@ -120,13 +120,12 @@
                 }
             }
         </script>
-         
-        
 
-       
-        
 
-               
+
+
+
+
+
 @endsection
-       
-    
+
