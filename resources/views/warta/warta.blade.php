@@ -12,6 +12,7 @@
                     <th scope="col">Keterangan</th>
                     <th scope="col">Tanggal</th>
                     <th scope="col">Photo</th>
+                    <th scope="col">File</th>
                     <th scope="col">Aksi</th> <!-- Kolom untuk tombol edit dan hapus -->
                 </tr>
             </thead>
@@ -22,6 +23,9 @@
                     <td>{{ $warta->keterangan }}</td>
                     <td>{{ $warta->tanggal }}</td>
                     <td><img src="{{ URL::asset('Admin/photo/'.$warta->photo) }}" class="img-thumbnail" alt="Image" width="150" height="100"></td>
+                    <td class="text-center">
+                        <a href="{{ asset('assets/file-warta/'.$warta->pdf) }}" download> {{ $warta->pdf }}</a>
+                    </td>
                     <td> <!-- Kolom untuk tombol edit dan hapus -->
                         <a href="{{ url('/admin/editwarta/'.$warta->id)}}" class="btn btn-primary mb-2">Edit</a>
                         <form action="{{ url('/admin/hapuswarta/'.$warta->id)}}" method="post" onsubmit="return confirm('Yakin mau hapus???');"> 

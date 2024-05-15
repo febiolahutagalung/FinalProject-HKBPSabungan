@@ -37,6 +37,17 @@
                     <div class="alert alert-danger">{{ $message }}</div>
                     @enderror
                 </div>
+                
+                <div class="form-group">
+                    <label for="photo">PDF</label>
+                    <br>
+                    <a href="{{ asset('assets/file-warta/'.$warta->pdf) }}" download> {{ $warta->pdf }}</a>
+                    <input name="pdf" type="file" class="form-control @error('pdf') is-invalid @enderror" id="pdf" value="{{ $warta->pdf }}">
+                    @error('pdf')
+                    <div class="alert alert-danger">{{ $message }}</div>
+                    @enderror
+                </div>
+                
                 <button class="btn btn-primary" type="submit">Update warta</button>
             </form>
         </div>

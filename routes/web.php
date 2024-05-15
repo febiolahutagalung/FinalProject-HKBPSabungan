@@ -94,14 +94,14 @@ Route::prefix('/admin')->namespace('App\Http\Controllers\Admin')->group(function
         Route::get('/editpengurus/{pengurusId}' , 'PengurusController@edit' );
         Route::post('/updatepengurus/{pengurusId}' , 'PengurusController@update' );
         Route::delete('/hapuspengurus/{pengurusId}' , 'PengurusController@destroy' );
-        Route::post('/tambahpengurus' , 'PengurusController@store');  
+        Route::post('/tambahpengurus' , 'PengurusController@store');
         Route::get('/faq' , 'FaqController@index' );
         Route::get('/tambahfaq' , 'FaqController@create' );
         Route::get('/editfaq/{faqId}' , 'FaqController@edit' );
         Route::post('/updatefaq/{faqId}' , 'FaqController@update' );
         Route::delete('/hapusfaq/{faqId}' , 'FaqController@destroy' );
-        Route::post('/tambahfaq' , 'FaqController@store' );  
-        Route::post('/tambahpengurus' , 'PengurusController@store');  
+        Route::post('/tambahfaq' , 'FaqController@store' );
+        Route::post('/tambahpengurus' , 'PengurusController@store');
         Route::get('/datajemaat' , 'DatajemaatController@index' );
         Route::get('/tambahdatajemaat' , 'DatajemaatController@create' );
         Route::get('/editdatajemaat/{datajemaatId}' , 'DatajemaatController@edit' );
@@ -126,7 +126,7 @@ Route::prefix('/admin')->namespace('App\Http\Controllers\Admin')->group(function
         Route::post('/updatedonasi/{donasiId}' , 'DonasiController@update' );
         Route::delete('/hapusdonasi/{donasiId}' , 'DonasiController@destroy' );
         Route::post('/tambahdonasi' , 'DonasiController@store');
-         
+
     });
     Route::match(['get','post'], 'register', 'AdminController@register');
 });

@@ -22,6 +22,10 @@
             <label for="photo">Photo:</label><br>
             <input type="file" class="form-control" id="photo" name="photo"><br><br>
         </div>
+        <div class="mb-3">
+            <label for="photo">File PDF:</label><br>
+            <input type="file" class="form-control" id="pdf" name="pdf"><br><br>
+        </div>
         <button type="submit" class="btn btn-primary">Simpan</button>
     </form>
 </div>

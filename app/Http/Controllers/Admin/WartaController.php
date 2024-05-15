@@ -14,12 +14,12 @@ class WartaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    
+
     public function dashboard()
     {
         return view('warta.dashboard');
     }
-    
+
     public function index()
     {
         $allWarta = Warta::all();
@@ -35,7 +35,7 @@ class WartaController extends Controller
      */
     public function create()
     {
-        return view('warta.tambahwarta'); 
+        return view('warta.tambahwarta');
     }
 
     /**
@@ -51,21 +51,34 @@ class WartaController extends Controller
             'keterangan'=>'required',
             'tanggal'=>'required',
             'photo'=>'required',
-            
         ]);
+
 
         $file = $request->file('photo');
         $namaFile = $file->getClientOriginalName();
         $tujuanFile = 'Admin/photo';
 
         $file->move($tujuanFile,$namaFile);
-        
+
 
         $newWarta = new Warta();
         $newWarta->judul =$request->judul;
         $newWarta->keterangan=$request->keterangan;
         $newWarta->tanggal=$request->tanggal;
         $newWarta->photo =$namaFile;
+
+        $dokumenval = $request->pdf;
+        if ($dokumenval) {
+            $documentLaporanPath = public_path('assets/file-warta/');
+            $documentNameLaporan = $dokumenval->getClientOriginalName();
+            $i = 1;
+            while (file_exists($documentLaporanPath . $documentNameLaporan)) {
+                $documentNameLaporan = pathinfo($dokumenval->getClientOriginalName(), PATHINFO_FILENAME) . "($i)." . $dokumenval->getClientOriginalExtension();
+                $i++;
+            }
+            $dokumenval->move($documentLaporanPath, $documentNameLaporan);
+            $newWarta->pdf = $documentNameLaporan;
+        }
 
         $newWarta->save();
         return redirect("/admin/warta")->with('status','Warta talah berhasil ditambahkan');
@@ -79,7 +92,7 @@ class WartaController extends Controller
      */
     public function show(Warta $warta)
     {
-        
+
     }
 
     /**
@@ -109,21 +122,43 @@ class WartaController extends Controller
             'tanggal'=> 'required',
             'photo'=> 'required',
         ]);
-        
+
         $file = $request->file('photo');
         $namaFile = $file->getClientOriginalName();
         $tujuanFile = 'Admin/photo';
 
         $file->move($tujuanFile,$namaFile);
 
-        Warta::where('id', $wartaId)
-            ->update([
-                
-                'judul'=> $request->judul,
-                'keterangan'=>$request->jabatan,
-                'tanggal'=>$request->tanggal,
-                'photo'=> $namaFile,
-            ]);
+        $dokumenval = $request->pdf;
+        if ($dokumenval) {
+            $documentLaporanPath = public_path('assets/file-warta/');
+            $documentNameLaporan = $dokumenval->getClientOriginalName();
+            $i = 1;
+            while (file_exists($documentLaporanPath . $documentNameLaporan)) {
+                $documentNameLaporan = pathinfo($dokumenval->getClientOriginalName(), PATHINFO_FILENAME) . "($i)." . $dokumenval->getClientOriginalExtension();
+                $i++;
+            }
+            $dokumenval->move($documentLaporanPath, $documentNameLaporan);
+                Warta::where('id', $wartaId)
+                ->update([
+
+                    'judul'=> $request->judul,
+                    'keterangan'=>$request->keterangan,
+                    'tanggal'=>$request->tanggal,
+                    'photo'=> $namaFile,
+                    'pdf'=> $documentNameLaporan,
+                ]);
+            }else{
+                 Warta::where('id', $wartaId)
+                ->update([
+
+                    'judul'=> $request->judul,
+                    'keterangan'=>$request->keterangan,
+                    'tanggal'=>$request->tanggal,
+                    'photo'=> $namaFile,
+                ]);
+        }
+
         return redirect('/admin/warta')->with('status','Warta dengan id'.$wartaId.'berhasil di ubah');
     }
 
